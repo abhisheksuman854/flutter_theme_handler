@@ -1,8 +1,8 @@
 name: flutter_theme_handler
 description: "A lightweight theme management package for Flutter"
 version: 0.0.27+3
-repository: https://github.com/Abhishek29041995/flutter_theme_handler
-homepage: https://github.com/Abhishek29041995/flutter_theme_handler
+repository: https://github.com/abhisheksuman854/flutter_theme_handler
+homepage: https://github.com/abhisheksuman854/flutter_theme_handler.git
 
 environment:
   sdk: ^3.8.0
