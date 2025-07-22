@@ -11,6 +11,7 @@ import 'package:flutter_theme_handler/src/widgets/navigation_rail_theme.dart';
 import 'package:flutter_theme_handler/src/widgets/outlined_button_theme.dart';
 import 'package:flutter_theme_handler/src/widgets/progress_theme_indicator.dart';
 import 'package:flutter_theme_handler/src/widgets/tab_bar_theme.dart';
+import 'package:flutter_theme_handler/src/widgets/text_button_theme.dart';
 import 'package:flutter_theme_handler/src/widgets/text_selection_theme.dart';
 
 class ThemeController extends ValueNotifier<ThemeData> {
@@ -36,6 +37,7 @@ class ThemeController extends ValueNotifier<ThemeData> {
   final String? arabicGoogleFont;
   final String? englishGoogleFont;
   final BottomNavigationBarThemeData? bottomNavigationBarThemeData;
+  final TextButtonThemeData? textButtonThemeData;
 
   ThemeController({
     required this.colorSchemeProvider,
@@ -57,6 +59,7 @@ class ThemeController extends ValueNotifier<ThemeData> {
     this.bottomSheetThemeData,
     this.drawerThemeData,
     this.bottomNavigationBarThemeData,
+    this.textButtonThemeData,
     this.useGoogleFonts = true,
     this.arabicGoogleFont,
     this.englishGoogleFont,
@@ -82,6 +85,7 @@ class ThemeController extends ValueNotifier<ThemeData> {
             bottomSheetThemeData,
             drawerThemeData,
             bottomNavigationBarThemeData,
+            textButtonThemeData,
             multiplier,
             useGoogleFonts,
             arabicGoogleFont,
@@ -109,6 +113,7 @@ class ThemeController extends ValueNotifier<ThemeData> {
     BottomSheetThemeData? bottomSheetThemeData,
     DrawerThemeData? drawerThemeData,
     BottomNavigationBarThemeData? bottomNavigationBarThemeData,
+    TextButtonThemeData? textButtonThemeData,
     double? multiplier,
     bool useGoogleFonts,
     String? arabicGoogleFont,
@@ -153,6 +158,7 @@ class ThemeController extends ValueNotifier<ThemeData> {
       drawerTheme: drawerThemeData ?? getDrawerTheme(colorScheme),
       bottomNavigationBarTheme: bottomNavigationBarThemeData ??
           getBottomNavigationBarTheme(colorScheme),
+      textButtonTheme: textButtonThemeData ?? getTextButtonTheme(colorScheme),
     );
   }
 
@@ -179,6 +185,7 @@ class ThemeController extends ValueNotifier<ThemeData> {
       bottomSheetThemeData,
       drawerThemeData,
       bottomNavigationBarThemeData,
+      textButtonThemeData,
       multiplier,
       useGoogleFonts,
       arabicGoogleFont,
@@ -211,6 +218,7 @@ class ThemeController extends ValueNotifier<ThemeData> {
           bottomSheetThemeData,
           drawerThemeData,
           bottomNavigationBarThemeData,
+          textButtonThemeData,
           multiplier,
           useGoogleFonts,
           arabicGoogleFont,
